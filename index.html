@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "style.css" />
+</head>
+<body id="body" class="content">
+
+<div id="gameStuff">
+    <button class="myButton" id="endGame" onclick="endGame()">End Game</button>
+    <h1 id="coor">CORRECT</h1>
+    <h2 id="quesText"></h2>
+    <div id="bool">
+        <div>
+            <input type="radio" id="true" name="drone" value="true"
+                   checked>
+            <label for="true">True</label>
+        </div>
+
+        <div>
+            <input type="radio" id="false" name="drone" value="false">
+            <label for="false">False</label>
+        </div>
+    </div>
+    <div id="multi">
+        <div>
+            <input type="radio" id="ch1" name="multi" value="NA"
+                   checked>
+            <label id="ch1L" for="ch1">NA</label>
+        </div>
+
+        <div>
+            <input type="radio" id="ch2" name="multi" value="NA">
+            <label id="ch2L" for="ch2">NA</label>
+        </div>
+
+        <div>
+            <input type="radio" id="ch3" name="multi" value="NA"
+                   checked>
+            <label id="ch3L" for="ch1">NA</label>
+        </div>
+
+        <div>
+            <input type="radio" id="ch4" name="multi" value="NA">
+            <label id="ch4L" for="ch2">NA</label>
+        </div>
+    </div>
+    <button class="myButton" id="submit" onclick="submit()">Submit Answer</button>
+    <button class="myButton" id="conti" onclick="ask()">Continue</button>
+    <h2 id="score">Score: 0</h2>
+    <h2 id="streak">Streak: 0</h2>
+</div>
+
+<div id="finStuff">
+    <h1>Congratulations, you have finished this trivia.</h1>
+    <h2 id="finScore"></h2>
+    <h2 id="hiStreak"></h2>
+    <button class="myButton" id="retryBut" onclick="retry()">Retry This Trivia</button>
+    <button class="myButton" id="resetBut" onclick="endGame()">Try Another Trivia</button>
+    <img id="vicImage">
+</div>
+
+<h3>Category:</h3>
+<select class="selectr" id = "category">
+    <option value = "27" >Animals</option>
+    <option value = "21">Sports</option>
+    <option value = "15">Video Games</option>
+    <option value = "18">Computer Science</option>
+    <option value = "22">Geography</option>
+</select>
+<br>
+
+<h3>Difficulty:</h3>
+<select class="selectr" id = "difficulty">
+    <option value = "easy" >Easy</option>
+    <option value = "medium">Medium</option>
+    <option value = "hard">Hard</option>
+</select>
+<br>
+
+<h3>Game Length:</h3>
+<select class="selectr" id = "resNo">
+    <option value = "5" >Short Game</option>
+    <option value = "10">Normal Game</option>
+    <option value = "15">Long Game</option>
+</select>
+<br>
+<br>
+<button class="myButton" id="playBut" onclick="play()">Play</button>
+
+
+</body>
+</html>
